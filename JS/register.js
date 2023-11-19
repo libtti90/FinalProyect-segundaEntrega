@@ -43,8 +43,10 @@ registerForm.addEventListener('submit', (event) => {
             };
 
             users.push(newUser);
+            
             localStorage.setItem('Users', JSON.stringify(users));
-            localStorage.setItem('Users', JSON.stringify(users));
+
+           
 
 console.log('Nuevo usuario añadido:', newUser);
         }
