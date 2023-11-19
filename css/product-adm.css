@@ -1,0 +1,44 @@
+:root {
+    --primary-color: #f0e8e0;
+    --primary-transp: #f0e8e08e;
+    --secondary-color: #382F28;
+    --third-color: #cebeaf;
+    --text-light: #e8d9ca;
+    --light-transparency: #e8d9ca98;
+    --font: 'Open Sans', sans-serif;
+    --font-secondary: 'victor';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+    
+}
+
+.main-container {
+    flex: 1; 
+}
+
+
+.table{
+width: 100%;
+margin: 10rem;
+padding: 0 2rem;
+}
+
+#table-body{background-color: var(--primary-color);
+   text-align: center;
+}
+th{background-color: var(--third-color);}
+.image-table img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.table tbody tr:nth-child(odd) {
+    background-color:var(--light-transparency); /* Color para filas impares (rojo) */
+}
+
