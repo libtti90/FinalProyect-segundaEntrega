@@ -1,13 +1,5 @@
-/*tomar el formulario
-tomar los datos cargados
-ver si existe un email como el que el usuario ingreso 
-corrobar que la contrasena sea la misma */
-//1 setear en el storage un current user
-//2 redireccionar al home
-//3 posible caso que tengamos error, no existe email o cintrasena no existe
-//4 cargar usuarios del array (localStorage)
 
-const users=JSON.parse(localStorage.getItem('users'))||[];
+const users=JSON.parse(localStorage.getItem("Users"));
 
 const form=document.getElementById('login-form');
 
@@ -30,7 +22,7 @@ form.addEventListener("submit",(evento)=>{
 
     })
 
-if(!user || user.password !== password) {
+if(!user || user.password !== newPassword) {
     swal({
         title: "The information you entered was not recognized.",
         text: "Please try again or register",
@@ -43,7 +35,8 @@ if(!user || user.password !== password) {
         return;
     }
 
-    localStorage.setItem('currentUser', JSON.stringify(user))
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    window.location.href = '/index.html';
 
     
 })

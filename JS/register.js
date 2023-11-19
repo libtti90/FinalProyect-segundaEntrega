@@ -1,5 +1,8 @@
 const registerForm = document.getElementById('formRegister');
-const users = JSON.parse(localStorage.getItem('users')) || [];
+const users=JSON.parse(localStorage.getItem('Users'));
+
+
+
 
 const firstPassword = document.getElementById('inputContrasena');
 const secondPassword = document.getElementById('inputRcontrasena');
@@ -36,11 +39,14 @@ registerForm.addEventListener('submit', (event) => {
                 password: firstPassword.value,
                 dateOfBirth: inputDateOfBirth.value,
                 state: inputState.value,
-                observation: observation.value
+               
             };
 
             users.push(newUser);
-            localStorage.setItem('users', JSON.stringify(users));
+            localStorage.setItem('Users', JSON.stringify(users));
+            localStorage.setItem('Users', JSON.stringify(users));
+
+console.log('Nuevo usuario añadido:', newUser);
         }
     } else {
         swal({

@@ -9,7 +9,12 @@ products.forEach(product => {
         <td class="name">${product.productName}</td>
         <td class="Details">${product.measurements}, ${product.materials}</td>
         <td class="price">$${product.price}</td>
-        <td class="actions"></td>
+        <td class="actions">
+        <button class="edit-btn" ><i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="edit-btn"><i class="fa-solid fa-trash-can"></i></i>
+              </button>
+        </td>
     </tr>`;
 });
 
