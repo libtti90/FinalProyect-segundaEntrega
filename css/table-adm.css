@@ -19,6 +19,125 @@ body {
 
 .main-container {
     flex: 1; 
+    display: flex;
+    flex-direction: row;
+}
+.user-register {
+
+    text-align: center;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    width: auto;
+    height: 900px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem 0;
+    padding: 3rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+
+
+
+}
+
+
+form {
+    width: 300px;
+    background-color: #f0e8e0;
+    position: relative;
+    padding-bottom: 2rem;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+
+
+
+}
+.form-label {
+    display: block;
+    margin: 5px;
+    margin: 15px 0 5px;
+
+}
+
+
+button {
+    background-color: var(--text-light);
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+    box-shadow: 0 0 10px var(--text-light);
+    padding: 8px 5px;
+    margin: 30px 0 20px;
+    height: 33px;
+}
+
+
+button:hover {
+    background-color: white;
+
+}
+
+select {
+    width: 215px;
+}
+
+
+
+.group {
+    outline: none;
+    border: 1px solid white;
+    transition: outline 0.5s ease;
+    padding: 8px 5px;
+    background-color: white;
+    color: var(--secondary-color);
+    width: 250px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    resize: none;
+
+}
+
+.group:focus {
+    outline: 2px solid var(--third-color);
+    box-shadow: 0 0 10px var(--third-color);
+
+}
+
+
+
+.decoration {
+    height: 72px;
+}
+
+@media screen and (width < 400px) {
+    .user-register {
+        width: 100%;
+
+
+
+
+    }
+
+    form {
+        margin: 1rem;
+        width: 100%;
+    }
+
+    .group {
+        width: 100%;
+    }
+
 }
 
 

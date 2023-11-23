@@ -45,6 +45,7 @@ registerForm.addEventListener('submit', (event) => {
             users.push(newUser);
             
             localStorage.setItem('Users', JSON.stringify(users));
+            window.location.href = '/index.html';
 
            
 

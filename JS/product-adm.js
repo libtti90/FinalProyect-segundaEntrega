@@ -13,7 +13,7 @@ function pintarProducts() {
             <td class="Details">${product.measurements}, ${product.materials}</td>
             <td class="price">$${product.price}</td>
             <td class="actions">
-            <button class="edit-btn" ><i class="fa-solid fa-pen-to-square"></i>
+            <button class="edit-product" title="Edit product" onclick="editProduct('${product.productName}')" ><i class="fa-solid fa-pen-to-square"></i>
                   </button>
                   <button class="edit-btn"><i class="fa-solid fa-trash-can"></i></i>
                   </button>
@@ -22,4 +22,14 @@ function pintarProducts() {
     });
 }
 
+
+
+function editProduct(name){
+    const productEdit = products.find((product)=>{
+if(name===product.name){
+    return true
+}
+console.log('productEdit')
+    })
+}
 pintarProducts()

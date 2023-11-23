@@ -12,7 +12,7 @@ form.addEventListener("submit",(evento)=>{
     
 
     const user = users.find((usr)=>{
-        if(usr.email===newEmail){
+        if(usr.email.toLowerCase()===newEmail){
             return true
         }
 
