@@ -23,26 +23,26 @@
 
         <nav class="main-nav">
 
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <link rel="stylesheet" href=""> Shop
-                </li>
+            <ul class="nav-list" id="header-nav">
+                <li class="nav-item"><a href="/index.html">
+                    <img class="nav-logo" src="/assets/logo/logo3.png" alt="logo.img">
+                </a></li>
+                <li class="nav-item"><link rel="stylesheet" href=""> Shop</li>
                 <li class="nav-item"><a class="nav-link" href="/pages/About/about.html">About</a> </li>
                 <li class="nav-item"><a class="nav-link" href="/pages/contact/contact.html">Contact</a> </li>
-                <li class="nav-item"><a class="nav-link" href="/pages/login/login.html"> Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="/pages/register/register.html">Register</a> </li>
+                
+                
 
             </ul>
         </nav>
-        <div class="user-menu">
-            <a href="/index.html">
-                <img class="nav-logo" src="/assets/logo/logo3.png" alt="logo.img">
-            </a>
-            <a href="">
-                <i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="">
-                <i class="fa-solid fa-user"></i></a>
+
+        <div class="user-menu" id="user-menu">
+            <div class="loginLink" id="loginLink"></div>
+            <a href=""><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
+            
         </div>
+
+
     </header>
 
     <main class="main-container">
@@ -158,12 +158,10 @@
 
 
 
-    <script src=
-    "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
-    
-      </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="/JS/initialData.js"></script>
       <script src="/JS/login.js"></script>
+      <script src="/JS/header.js"></script>
 
 </body>
 

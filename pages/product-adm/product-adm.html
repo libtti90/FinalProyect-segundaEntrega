@@ -23,45 +23,126 @@
 
         <nav class="main-nav">
 
-            <ul class="nav-list">
+            <ul class="nav-list" id="header-nav">
+                <li class="nav-item"><a href="/index.html">
+                        <img class="nav-logo" src="/assets/logo/logo3.png" alt="logo.img">
+                    </a></li>
                 <li class="nav-item">
                     <link rel="stylesheet" href=""> Shop
                 </li>
                 <li class="nav-item"><a class="nav-link" href="/pages/About/about.html">About</a> </li>
                 <li class="nav-item"><a class="nav-link" href="/pages/contact/contact.html">Contact</a> </li>
-                <li class="nav-item"><a class="nav-link" href="/pages/login/login.html"> Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="/pages/register/register.html">Register</a> </li>
+
+
 
             </ul>
         </nav>
-        <div class="user-menu">
-            <a href="/index.html">
-                <img class="nav-logo" src="/assets/logo/logo3.png" alt="logo.img">
-            </a>
-            <a href="">
-                <i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="">
-                <i class="fa-solid fa-user"></i></a>
+
+        <div class="user-menu" id="user-menu">
+            <div class="loginLink" id="loginLink"></div>
+            <a href=""><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
+
         </div>
+
+
     </header>
-
     <main class="main-container">
-
-        <table class="table">
-            <thead>
-                <tr class="table-head">
-                    <th>Image</th>
-                    <th>Product</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-               
+        <section class="section-register">
+            <div class="user-register">
+                <form action="" method="post" class="" id="ProductForm">
+                    
+                    <input type="hidden" name="id">
+                  
     
-            </tbody>
-        </table>
+                    <div>
+                        <label class="form-label" for="inputName">Product Name</label>
+                        <input class="group" type="text" value="" name="inputName" id="inputName" placeholder="Product"
+                            required minlength="2" maxlength="60">
+    
+                    </div>
+                    <div>
+                        <label class="form-label" for="inputPrice">Price</label>
+                        <input class="group" type="number" value="" name="inputPrice" id="inputPrice" placeholder="$"
+                            title="price">
+                    </div>
+                    <div>
+                        <label class="form-label" for="inputdate">Date</label>
+                        <input class="group" type="date" value="" name="inputdate" id="inputdate" placeholder="$"
+                            title="price">
+                    </div>
+    
+                    
+                    <div>
+                        <label class="form-label" for="inputCategory">Category</label>
+                        <select class="group" name="inputCategory" id="inputCategory">
+                            <option value="Living Room" selected>Living Room</option>
+                            <option value="Kitchen">Kitchen</option>
+                            <option value="Bedroom">Bedroom</option>
+                            <option value="Bathroom">Bathroom</option>
+    
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label" for="inputCaracteristics">Caracteristics</label>
+                        <textarea class="group" name="inputCaracteristics" id="inputCaracteristics" cols="10" rows="5"
+                            placeholder="Caracteristics..."></textarea>
+                    </div>
+                    <label class="form-label" for="width">Width:</label>
+                    <input class="group" type="text" id="width" name="width" placeholder="Enter width">
+                
+                    <label class="form-label" for="height">Height:</label>
+                    <input class="group" type="text" id="height" name="height" placeholder="Enter height">
+                
+                    <label class="form-label" for="depth">Depth:</label>
+                    <input class="group" type="text" id="depth" name="depth" placeholder="Enter depth">
+                    <div>
+                        <label class="form-label" for="inputMaterials">Materials</label>
+                        <input class="group" type="text" value="" name="inputMaterials" id="inputMaterials" placeholder="Product"
+                            >
+    
+                    </div>
+                    <div>
+                        <label class="form-label" for="inputImage">Image</label>
+                        <input class="group" type="text" value="" name="inputImage" id="inputImage" placeholder="image"
+                            >
+    
+                    </div>
+                   
+    
+                    <div>
+                        <button class="btn-form btn-Edit" id="submit" type="submit">Save</button>
+                        
+                    </div>
+                </form>
+
+        </div>
+        </section>
+
+
+
+        
+            <section class="table-user">
+                <table class="table">
+                    <thead>
+                        <tr class="table-head">
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+    
+    
+                    </tbody>
+            </section>
+            
+            </table>
+        
+ </section>
+        
 
 
 
@@ -146,12 +227,12 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/product-adm.js"></script>
-    <script src="JS/header.js"></script>
-    
+    <script src="/JS/initialData.js"></script>
+    <script src="/JS/header.js"></script>
+
 
 </body>
 
 </html>
-

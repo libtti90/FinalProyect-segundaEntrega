@@ -23,18 +23,26 @@ registerForm.addEventListener('submit', (event) => {
         });
 
         if (existentUser) {
-            swal({
-                title: "It looks like you already have an account with us",
-                text: "Please Login",
-                icon: "error",
-                buttons: ["login", true],
+            
+            Swal.fire({
+                title: 'It looks like you already have an account with us',
+                icon: 'Please Login',
+                showCancelButton: true,
+                confirmButtonText: 'Login',
+                cancelButtonText: 'Cancelar',
+            }).then((result) => {
+        
+                if (result.isConfirmed) {
+                    
+                    window.location.href = '/pages/login/login.html';
+                }
             });
         } else {
             const id = crypto.randomUUID();
 
             let newUser = {
                 idUser: id,
-                name: inputName.value,
+                fullname: inputName.value,
                 email: inputEmail.value,
                 password: firstPassword.value,
                 dateOfBirth: inputDateOfBirth.value,
@@ -43,19 +51,23 @@ registerForm.addEventListener('submit', (event) => {
             };
 
             users.push(newUser);
-            
+            localStorage.setItem('currentUser', JSON.stringify(newUser));
             localStorage.setItem('Users', JSON.stringify(users));
             window.location.href = '/index.html';
+            
 
            
 
-console.log('Nuevo usuario añadido:', newUser);
+
         }
     } else {
-        swal({
-            title: "Passwords don't match",
-            text: "Try again",
-            icon: "error",
-        });
+        Swal.fire({
+            title: 'Passwords does not match',
+            icon: 'error',
+            showCancelButton: true,
+            confirmButtonText: 'Try again',
+            cancelButtonText: 'Cancelar',
+        })
+        registerForm.reset();
     }
 });

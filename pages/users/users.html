@@ -23,35 +23,36 @@
 
         <nav class="main-nav">
 
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <link rel="stylesheet" href=""> Shop
-                </li>
+            <ul class="nav-list" id="header-nav">
+                <li class="nav-item"><a href="/index.html">
+                    <img class="nav-logo" src="/assets/logo/logo3.png" alt="logo.img">
+                </a></li>
+                <li class="nav-item"><link rel="stylesheet" href=""> Shop</li>
                 <li class="nav-item"><a class="nav-link" href="/pages/About/about.html">About</a> </li>
                 <li class="nav-item"><a class="nav-link" href="/pages/contact/contact.html">Contact</a> </li>
-                <li class="nav-item"><a class="nav-link" href="/pages/login/login.html"> Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="/pages/register/register.html">Register</a> </li>
+                
+                
 
             </ul>
         </nav>
-        <div class="user-menu">
-            <a href="/index.html">
-                <img class="nav-logo" src="/assets/logo/logo3.png" alt="logo.img">
-            </a>
-            <a href="">
-                <i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="">
-                <i class="fa-solid fa-user"></i></a>
+
+        <div class="user-menu" id="user-menu">
+            <div class="loginLink" id="loginLink"></div>
+            <a href=""><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
+            
         </div>
+
+
     </header>
 
     <main class="main-container">
-        <div class="user-register">
+        <section class="section-register">
+                    <div class="user-register">
             
 
             <form action="" method="post" id="formUsers">
 
-
+<input type="hidden" name="id">
 
                 <div>
                     <label class="form-label" for="fullname">Full Name</label>
@@ -59,7 +60,7 @@
                         placeholder="Jhon Doe" required minlength="2" maxlength="60">
 
                 </div>
-                <div class="decoration">
+                <div>
                     <label class="form-label" for="email">Email Address</label>
                     <input class="group" type="email" value="" name="email" id="email"
                         placeholder="JhonDoe@gmail.com" title="Please enter a valid email address.">
@@ -69,20 +70,16 @@
                         <div class="circle"></div>
                     </div>
                 </div>
-                <div class="decoration">
+                <div>
                     <label class="form-label" for="password">Password</label>
                     <input class="group" type="password" value="" name="password" id="password"
                         placeholder="******" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8"
                         title="The password must contain at least 8 characters, including at least one lowercase letter, one uppercase letter, one number, and one special character."
                         maxlength="20">
-                    <div class="square">
-                        <div class="circle"></div>
-                        <div class="circle"></div>
-                        <div class="circle"></div>
-                    </div>
+                    
                     <div>
                         <label class="form-label" for="age">Age</label>
-                        <input class="number" type="" value="" name="age" id="age">
+                        <input class="group" type="" value="" name="age" id="age">
                     </div>
                 
                 <div>
@@ -146,16 +143,16 @@
                         <option value="WY">Wyoming</option>
                     </select>
                 </div>
-                
-                    <div class="input-group">
-                        <label for="image">Image</label>
-                        <input type="url" name="image" id="image">
-                    </div>
+                <div>
+                    <label class="form-label" for="image">Image</label>
+                    <input class="group" type="url" value="" name="image" id="image">
+                </div>
+                    
                     <div class="check">
                         <label for="active">Active</label>
                         <input type="checkbox" name="active" id="active">
                     </div>
-                    <button type="submit" class="btn-form">Add User</button>
+                    <button id="btn-form" type="submit" class="btn-form btn-Edit" >Add User</button>
     
                     
                         
@@ -172,6 +169,8 @@
 
 
         </div>
+        </section>
+
 
         
 <section class="table-user">
@@ -286,12 +285,12 @@
 
 
 
-    <script src=
-    "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
-    
-      </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       
       <script src="/JS/usersAdm.js"></script>
+      <script src="/JS/header.js"></script>
+      <script src="/js/format-date.js"></script>
+      <script src="/JS/initialData.js"></script>
       
 
 </body>

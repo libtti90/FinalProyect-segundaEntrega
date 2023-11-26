@@ -13,6 +13,7 @@ form.addEventListener("submit",(evento)=>{
 
     const user = users.find((usr)=>{
         if(usr.email.toLowerCase()===newEmail){
+            
             return true
         }
 
@@ -23,15 +24,22 @@ form.addEventListener("submit",(evento)=>{
     })
 
 if(!user || user.password !== newPassword) {
-    swal({
-        title: "The information you entered was not recognized.",
-        text: "Please try again or register",
-        icon: "success",
-        buttons: ["Register", true],
-       
+    
 
-
-      });
+    Swal.fire({
+        title: 'User no found',
+        icon: 'error',
+        showCancelButton: true,
+        confirmButtonText: 'Register',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        
+        if (result.isConfirmed) {
+            
+            window.location.href = '/pages/register/register.html';
+        }
+    });
+      
         return;
     }
 

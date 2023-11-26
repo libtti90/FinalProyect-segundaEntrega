@@ -14,7 +14,7 @@ function pintarCards(products) {
         <header class="card-header">
             <div class="img-box">
                 <img src=${product.image} class="card-image" loading="lazy">
-                <img src="" alt="Bisou Accent Chair side view" class="card-image2" loading="lazy">
+                <img src=${product.secondImage} alt="Bisou Accent Chair side view" class="card-image2" loading="lazy">
                     
             </div>
          
@@ -22,11 +22,11 @@ function pintarCards(products) {
         <div class="card-body">
             <h2 class="card-info-title">${product.productName}</h2>
 
-            <p class="product-description"> </p>
+            <p class="product-description">${product.caracteristics} </p>
         </div>
         <div class="values">
-            <div class="card-values"></div>
-            <div class="card-price"></div>
+            <div class="card-values">${product.date}</div>
+            <div class="card-price">${product.price}</div>
         </div>
         <footer class="card-footer">
             <a href="#" class="card-button">Ver mas</a>
