@@ -61,6 +61,7 @@ registerForm.addEventListener('submit', (event) => {
 
         }
     } else {
+        
         Swal.fire({
             title: 'Passwords does not match',
             icon: 'error',
@@ -68,6 +69,7 @@ registerForm.addEventListener('submit', (event) => {
             confirmButtonText: 'Try again',
             cancelButtonText: 'Cancelar',
         })
-        registerForm.reset();
+        
     }
+    registerForm.reset();
 });

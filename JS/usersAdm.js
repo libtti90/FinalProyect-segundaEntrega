@@ -81,6 +81,11 @@ formUser.addEventListener("submit", (evtForm) => {
         })
 
         usersAdm[indice] = user;
+        Swal.fire(
+            'Good Job',
+            'User Edited',
+            'success'
+          ) 
 
     }
 
@@ -99,7 +104,7 @@ formUser.addEventListener("submit", (evtForm) => {
 
     localStorage.setItem('Users', JSON.stringify(usersAdm));
 
-
+    formUser.reset();
 
 
 })
@@ -161,12 +166,13 @@ function userEdit(idSent) {
     formElements.image.value = userFound.image;
     formElements.checked = userFound.active;
     formElements.password.disabled = true;
+    formElements.password2.disabled=true;
     formElements.id.value = userFound.id;
 
 
     button.classList.add('btn-Edit');
     button.innerText = "Edit";
-    console.log(formElements.id.value)
+    
 
     PintarUsers();
     localStorage.setItem('Users', JSON.stringify(usersAdm));
