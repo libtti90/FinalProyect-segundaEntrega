@@ -2,12 +2,27 @@ const products=JSON.parse(localStorage.getItem("products"));
 
 const tableBody = document.getElementById('table-body');
 
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('keyup',(eventSearch)=>{
+const inputValue=eventSearch.target.value;
+const productFound=products.filter((pdct)=>{
+const nameProduct=pdct.productName.toLowerCase();
+if (nameProduct.includes(inputValue)){
+    return true;
+}
+return false
+
+})
+console.log(productFound)
+pintarProducts(productFound)
+
+})
 //table
 
-function pintarProducts() {
+function pintarProducts(arrayProducts) {
 
     tableBody.innerHTML = ""
-    products.forEach((product,index ) => {
+    arrayProducts.forEach((product,index ) => {
         tableBody.innerHTML += `
         <tr class="table-body">
             <td class="image-table"><img src="${product.image}" alt=""></td>
@@ -29,7 +44,7 @@ function pintarProducts() {
 
 
 
-pintarProducts()
+pintarProducts(products)
 
 //obtengo formulario
 const formProducts = document.getElementById('ProductForm');
@@ -86,7 +101,7 @@ else{
         'success'
       ) 
 }
-pintarProducts();
+pintarProducts(products);
 formProducts.reset();
 localStorage.setItem('products',JSON.stringify(products));
 
@@ -102,7 +117,7 @@ function editProduct(id) {
     
     const productEdit=products.find((product)=>{
            if(product.id===id){
-            return true //stop function
+            return true 
             }
 
 
@@ -116,9 +131,9 @@ function editProduct(id) {
             'error'
           )
         
-        return //stop function
+        return 
     }
-  //if i can edit product next step  
+
     formProducts.elements.inputName.value=productEdit.productName;
     formProducts.elements.inputPrice.value=productEdit.price;
     formProducts.elements.id.value=productEdit.id;
@@ -131,7 +146,7 @@ function editProduct(id) {
     buttonProducts.classList.add('btn-Edit');
     buttonProducts.innerText ="Edit";
     
-    pintarProducts();
+    pintarProducts(products);
     localStorage.setItem('products',JSON.stringify(products));
     
 };
@@ -151,7 +166,7 @@ function deleteProduct(index,name) {
         'Product Deleted',
         'success'
       )
-    pintarProducts()
+    pintarProducts(products)
     localStorage.setItem('products',JSON.stringify(products));
   }
     
