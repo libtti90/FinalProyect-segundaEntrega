@@ -48,7 +48,7 @@ if(loguedUser){
         window.location.href = '/index.html';
     }
 
-//Img Adm
+//Img Administrador
     const userImage=document.createElement('img')
     const nameAdm=document.createElement('a')
     nameAdm.innerText=loguedUser.fullname;
@@ -58,7 +58,9 @@ if(loguedUser){
     userImage.src=loguedUser.image;
     userImage.alt=`${loguedUser.fullname} profile picture`;
     userImage.classList.add('user-picture');
-//name Adm
+
+
+    //nombre administrador
 const userName =document.createElement("a");
     userName.innerText = loguedUser.fullname;
     userInfoHeader.appendChild(userImage);
@@ -71,7 +73,7 @@ const userName =document.createElement("a");
 }
 else{
 
-    //user no legued in, user menu
+    //user no logueado
     const userAction = userInfoHeader.querySelector('#loginLink');
    
     const Login =document.createElement("a");
@@ -81,7 +83,7 @@ else{
     userAction.appendChild(Login);
 
 
-    //header nav - user no logued in
+    //header nav - user no logueado
     const registerList = document.createElement('li');
         const registerLink =document.createElement("a");
         registerLink.href='/pages/register/register.html';
@@ -95,4 +97,3 @@ else{
 
 
 }
-//CLIENT_ROLE//

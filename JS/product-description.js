@@ -12,7 +12,7 @@ newPhoto.addEventListener('click', ()=>{
     pcipalImage.src = newPhoto.src;
     console.log(newPhoto.src);
     console.log(pcipalImage.src);
-})
+})//sin terminar
 
 
 

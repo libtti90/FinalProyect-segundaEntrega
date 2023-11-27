@@ -202,6 +202,12 @@ padding: 1rem;}
     margin: 2rem;
     display: flex;
     flex-direction: column;
+    
+}
+#search{
+    outline: 2px solid var(--third-color);
+    box-shadow: 0 0 10px var(--third-color);
+    margin-bottom: 0.50rem;
 }
 @media screen and (width < 1024px) {
     .main-container {

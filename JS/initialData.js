@@ -137,7 +137,7 @@ const productsInLocal=JSON.parse(localStorage.getItem("products"))
 
 const UsersList = [{
     fullname: 'John Doe',
-    age: 20,
+    age: "20",
     email: 'admin@admin.com',
     id: '1',
     active: true,
@@ -149,7 +149,7 @@ const UsersList = [{
 },
 {
     fullname: 'Anne Smith',
-    age: 25,
+    age: "25",
     email: 'Anne_Smith@gmail.com',
     id: '2',
     active: true,
@@ -161,7 +161,7 @@ const UsersList = [{
 },
 {
     fullname: 'Michael Pitt',
-    age: 40,
+    age: "40",
     email: 'MichaelPitt20@gmail.com',
     id: '3',
     active: true,
