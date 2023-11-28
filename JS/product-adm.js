@@ -71,6 +71,7 @@ const newProduct={
     id:id,
     caracteristics:submitForm.target.elements.inputCaracteristics.value,
     materials:submitForm.target.elements.inputMaterials.value,
+    inStock:submitForm.target.elements.inStock.value
     
 }
 

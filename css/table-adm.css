@@ -80,6 +80,7 @@ form {
     align-items: center;
     justify-content: center;
     padding: 2rem;
+   
 
 
 
@@ -175,7 +176,11 @@ select {
     }
 
 }
-
+@media screen and (width < 1024px) {
+    .main-container{
+        flex-direction: column;
+    }
+}
 
 
 
@@ -221,7 +226,8 @@ padding: 1rem;}
       }
 
 }
-.table{padding-bottom: 2rem;}
+.table{padding-bottom: 2rem;
+margin-top: 2rem;}
 .table-user{
     
     height: 100%;

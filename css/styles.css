@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #f0e8e0;
-    --primary-transp: #f0e8e08e;
+    --primary-transp: #f0e8e0c3;
     --secondary-color: #382F28;
     --third-color: #cebeaf;
     --text-light: #e8d9ca;
@@ -17,7 +17,7 @@
 
 }
 a{text-decoration: none;}
-a:visited {
+.link-cat:visited {
     color: var(--secondary-color);
 }
 
