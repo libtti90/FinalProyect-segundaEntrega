@@ -79,6 +79,7 @@ body {
     align-items: center;
     color: var(--secondary-color);
     font-weight: 300;
+    
 
 
 
@@ -88,6 +89,7 @@ body {
 .nav-link {
     text-decoration: none;
     color: var(--secondary-color);
+    
 }
 
 .user-menu {
@@ -337,7 +339,9 @@ body {
 }
 
 /*//////////////////////////////////////////////CONTAINER/////////////////////////////////*/
-
+.main-container-categories{
+    padding: 8rem 2rem;
+}
 .main-container {
 
     display: flex;
@@ -415,9 +419,16 @@ left: 1rem;
     border-radius: 5px;
 }
 
+.main-container-category{
+padding: 0 5rem;
+}
 
-
-
+.category-title{
+    font-weight: 300;
+    margin: 5rem 0;
+    width: 100%;
+    
+}
 
 .main-categories{
     grid-column: 3/5;

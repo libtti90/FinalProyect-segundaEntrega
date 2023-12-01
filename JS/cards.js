@@ -1,8 +1,8 @@
 
 const cardContainer = document.querySelector(".card-container");
-console.log(cardContainer)
+
 const productsArray=JSON.parse(localStorage.getItem("products"));
-console.log(productsArray)
+
 
 
 function pintarCards(products) {
@@ -29,35 +29,38 @@ function pintarCards(products) {
             <div class="card-price">${product.price}</div>
         </div>
         <footer class="card-footer">
-            <a href="#" class="card-button">Ver mas</a>
+    
+            <button class="card-btn" onclick="seeMore( '${product.id}')">See more</button>
             <button class="card-btn">Comprar</button>
 
         </footer>`
     });
 }
 
+////se more button cards
+function seeMore(choosenProduct) {
+    const product=productsArray.find((pto)=>{
+        if(pto.id===choosenProduct){
+            
+            return true
+        }
+
+        else{
+            return false
+            
+        }
+
+    })
+    window.location.href = '/pages/Product-description/product-description.html';
+    localStorage.setItem('currentProduct', JSON.stringify(product));
+}
 pintarCards()
+////categories index
+function pintarCategories(category) {
+    const categoryProducts = productsArray.filter((product) => {
+        return product.category === category;
+    });
 
-/*<articule class="card">
-                <header class="card-header">
-                    <div class="img-box">
-                        <img src="" class="card-image" loading="lazy">
-                        <img src="" alt="Bisou Accent Chair side view" class="card-image2" loading="lazy">
-                            
-                    </div>
-                 
-                </header>
-                <div class="card-body">
-                    <h2 class="card-info-title"> </h2>
-
-                    <p class="product-description"> </p>
-                </div>
-                <div class="values">
-                    <div class="card-values"></div>
-                    <div class="card-price"></div>
-                </div>
-                <footer class="card-footer">
-                    <a href="#" class="card-button">Ver mas</a>
-                    <button class="card-btn">Comprar</button>
-
-                </footer>*/
+    console.log(categoryProducts);
+    localStorage.setItem('currentCategory', JSON.stringify(categoryProducts));
+}

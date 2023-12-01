@@ -66,7 +66,7 @@ formUser.addEventListener("submit", (evtForm) => {
         age: evtForm.target.elements.age.valueAsNumber,
         email: evtForm.target.elements.email.value,
         password: evtForm.target.elements.password.value,
-        active: evtForm.target.elements.active.value,
+        active: evtForm.target.elements.active.checked,
         bornDate: new Date(evtForm.target.elements.inputDateOfBirth.value).getTime(),
         location: evtForm.target.elements.state.value,
         id: id,

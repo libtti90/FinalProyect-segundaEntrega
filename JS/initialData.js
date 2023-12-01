@@ -31,6 +31,7 @@ const productList = [
         date:"08/30/2023",
         id:"2",
         inStock: true,
+        
         caracteristics:"Named after the French word for kiss our Bisou chair is a loving tribute to both vintage and contemporary European style. Bentwood ash veneer finished in a warm honey tone curves the striking, heart-shaped arms. Set within the embrace of the playful frame, a sculptural cushion shapes the super-comfortable all-in-one seat and back. The off-white, wool-blend fabric lends dimension and touch-me texture. Bisou's bold silhouette belies its petite scale, making the accent chair easy to use in pairs."
     },
     { 

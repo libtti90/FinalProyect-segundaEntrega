@@ -26,7 +26,8 @@ if(loguedUser){
         const productLink = document.createElement('a');
         productLink.href = '/pages/product-adm/product-adm.html';
         productLink.innerText = 'Product admin';
-        productListItem.classList.add('nav-item');
+        productLink.classList.add('nav-link')
+        
        
     
         productListItem.appendChild(productLink);

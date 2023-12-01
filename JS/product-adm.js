@@ -13,7 +13,7 @@ if (nameProduct.includes(inputValue)){
 return false
 
 })
-console.log(productFound)
+
 pintarProducts(productFound)
 
 })
@@ -71,7 +71,11 @@ const newProduct={
     id:id,
     caracteristics:submitForm.target.elements.inputCaracteristics.value,
     materials:submitForm.target.elements.inputMaterials.value,
-    inStock:submitForm.target.elements.inStock.value
+    inStock:submitForm.target.elements.inStock.checked,
+    date: formatInputDate2(submitForm.target.elements.inputdate.value),
+  
+    
+    
     
 }
 
@@ -142,7 +146,8 @@ function editProduct(id) {
     formProducts.elements.inputCaracteristics.value=productEdit.caracteristics;
     formProducts.elements.inputMaterials.value=productEdit.materials;
     formProducts.elements.inputImage.value=productEdit.image;
-    formProducts.elements.inputdate.value=formatInputDate(productEdit.date);
+    formProducts.elements.inputdate.value=productEdit.date;
+    
 
     buttonProducts.classList.add('btn-Edit');
     buttonProducts.innerText ="Edit";
@@ -186,26 +191,28 @@ function formatedDate(date) {
     return dateFormat
 }
 
-function formatInputDate(fechaInput) {
-
+function formatInputDate2(fechaInput) {
+  
     const fecha = new Date(fechaInput);
+  
     
-    const year = fecha.getFullYear()
+    const year = fecha.getFullYear();
+  
     
     let month = fecha.getMonth() + 1;
-    
-    if(month < 10) {
-      month = `0` + month
+    if (month < 10) {
+        month = `0` + month;
     }
+  
     
-    let day = fecha.getDate()
-    if(day < 10) {
-      day = `0` + day
+    let day = fecha.getDate();
+    if (day < 10) {
+        day = `0` + day;
     }
+  
     
-    
-    const formatedDate = `${year}-${month}-${day}`
+    const formatedDate = `${day}-${month}-${year}`;
+  
     
     return formatedDate;
-    
-    }
+  }
