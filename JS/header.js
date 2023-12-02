@@ -49,7 +49,7 @@ if(loguedUser){
         window.location.href = '/index.html';
     }
 
-//Img Administrador
+//Img Administrator
     const userImage=document.createElement('img')
     const nameAdm=document.createElement('a')
     nameAdm.innerText=loguedUser.fullname;
@@ -61,7 +61,7 @@ if(loguedUser){
     userImage.classList.add('user-picture');
 
 
-    //nombre administrador
+    //name administrator
 const userName =document.createElement("a");
     userName.innerText = loguedUser.fullname;
     userInfoHeader.appendChild(userImage);

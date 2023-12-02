@@ -135,6 +135,40 @@ const productList = [
         id:"8",
         inStock: true,
         caracteristics:"Refined and bold, Keane takes bedroom storage to the next level. Scaled to create a stately presence in the master bedroom, each piece is crafted of beautiful mahogany and meranti wood with a grey-wash driftwood finish. Studded with warm brass round pulls, this roomy six-drawer low dresser has inset panels and channel detailing to call attention to its clean, architectural lines. Designed by Bill Eastburn of William Eastburn Design, the Keane Driftwood 6-Drawer Wood Dresser is a Crate and Barrel exclusive."
+    },
+    { 
+        image:'/assets/images/kitchen.png',
+        secondImage:'/assets/images/kitchen2.png',
+        productName: "Belmont White Kitchen Island",
+        price: "599",
+        color: "Oat",
+        measurements: "64\"W x 19.5\"D x 34\"H",
+        width:"64",
+        height:"34",
+        depth:"19.5",
+        materials: "Wood",
+        category: "Kitchen",
+        date:"08/29/2023",
+        id:"9",
+        inStock: true,
+        caracteristics:"Belmont instantly expands your work surface and storage area as it keeps up with you in the kitchen on sturdy tapered feet. Designed by Bill Eastburn of William Eastburn Design, this contemporary kitchen island with retro styling features a sustainable solid rubberwood top with a foodsafe oil finish and a drop leaf, supported by a base with hidden drawers and shelving.This kitchen island is equipped with 2 deep drawers, a sliding door cabinet with an adjustable shelf, and 2 towel bars. The 4 optional casters (sold separately) make it easy to move or store. With leaf up, accommodates counter stools. The Belmont Kitchen Island is a Crate and Barrel exclusive."
+    },
+    { 
+        image:'/assets/images/bathroom.png',
+        secondImage:'/assets/images/bathroom2.png',
+        productName: "Carmen  White Marble Top Single Sink",
+        price: "2499",
+        color: "Black",
+        measurements: "64\"W x 19.5\"D x 34\"H",
+        width:"64",
+        height:"34",
+        depth:"19.5",
+        materials: "Wood",
+        category: "Bathroom",
+        date:"08/29/2023",
+        id:"10",
+        inStock: true,
+        caracteristics:"Whether your decor leans modern or traditional, our Carmen vanity refreshes your bathroom easily and without a costly remodel. Solid ash wood crafts the vanity with clean lines and a double-door flat-front cabinet outfitted with slim cylindrical bar pulls. The simple design provides open storage with a single shelf for storing towels or toiletry-filled baskets. A honed white Volakas marble top adds contrast along with unique grey veining and provides a rectangular cutout for the white ceramic undermount sink. Easy to install and built to last, the Carmen single vanity is a Crate & Barrel exclusive."
     }
     
 ];

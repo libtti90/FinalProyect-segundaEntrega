@@ -425,10 +425,11 @@ padding: 0 5rem;
 
 .category-title{
     font-weight: 300;
-    margin: 5rem 0;
+    margin: 1rem 0;
     width: 100%;
     
 }
+
 
 .main-categories{
     grid-column: 3/5;
@@ -482,7 +483,53 @@ padding: 0 5rem;
     padding: 1rem 0;
 }
 
+@media (width < 768px) {
+    .title-design{
+        top: 1rem;
+        color:white;
+        left: 1rem;
+        font-size:20px;
+        }
+        
+        
+        
+        .design-description {
+        
+           display: none;
+        
+        }
+        .design-box>button {
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            min-width: 94px;
+            min-height: 80px;
+            display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+            
+        }
+        .link-cat-title{
+            font-size: 20px;
+        }
 
+}
+
+
+/*////////////////////category Page/////////////////*/
+
+ .category-cards{
+     margin: 5rem 0;
+     
+     
+ }
+ .card-box{display: flex;
+    justify-content: center;
+}
+ 
 
 .card-container {
     

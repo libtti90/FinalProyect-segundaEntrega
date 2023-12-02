@@ -46,7 +46,7 @@ function pintarProducts(arrayProducts) {
 
 pintarProducts(products)
 
-//obtengo formulario
+//get form
 const formProducts = document.getElementById('ProductForm');
 const buttonProducts=formProducts.querySelector('button[type=submit]');
 formProducts.addEventListener('submit',(submitForm)=>{

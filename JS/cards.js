@@ -10,7 +10,8 @@ function pintarCards(products) {
     cardContainer.innerHTML=""
 
     productsArray.forEach((product,index) => {
-        cardContainer.innerHTML+=`<articule class="card">
+        cardContainer.innerHTML+=`<articule class="card-box" >
+        <div class="card">
         <header class="card-header">
             <div class="img-box">
                 <img src=${product.image} class="card-image" loading="lazy">
@@ -33,7 +34,7 @@ function pintarCards(products) {
             <button class="card-btn" onclick="seeMore( '${product.id}')">See more</button>
             <button class="card-btn">Comprar</button>
 
-        </footer>`
+        </footer></div>`
     });
 }
 
